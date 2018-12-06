@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="gb2312"?>
+<books xmlns:people="http://www.xxxx.com/people">
+	<book>
+		<title>JSP深入编程</title>
+		<author>
+			<people:name>张三</people:name>
+			<people:title>作家</people:title>
+		</author>
+	</book>
+	<book>
+		<title>XML从入门到精通</title>
+		<author>
+			<people:name>李四</people:name>
+			<people:title>教师</people:title>
+		</author>
+	</book>
+</books>

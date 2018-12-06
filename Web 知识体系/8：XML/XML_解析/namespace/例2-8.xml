@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="gb2312"?>
+<x xmlns:n1="http://www.w3.org" 
+   xmlns:n2="http://www.w3.org" >
+    <!--错误，两个属性的名字相同-->
+    <bad a="1"     a="2" />	
+    <!--错误，前缀n1和n2绑定的是同一个名称空间名字，而本地部分也完全相同-->
+    <bad n1:a="1"  n2:a="2" />
+</x>

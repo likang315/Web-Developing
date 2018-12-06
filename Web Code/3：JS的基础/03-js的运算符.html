@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+</body>
+	<script type="text/javascript">
+		/* 
+			* js的运算符
+				* 算术运算符
+					* 0或者null是false，非0或者非null是true，默认用1表示。
+					var num = 3710;
+					alert(num/1000*1000);
+						* 不区分整数和小数
+				* 赋值运算符
+					* 和java是一样的
+				* 比较运算符
+					* ==	比较值是否相同
+					* ===	比较值和类型是否相同
+				* 逻辑运算符
+					* 和java中一样
+				
+				* 三元运算符
+					条件?值1:值2
+		*/
+		
+		var num = 3710;
+		alert(num/1000*1000+1);	// 3711
+		
+		var str = "12";
+		alert(str + 1 ); 	//	121,拼接
+		alert(str - 1);		// 11，减法
+		alert(str*1 + 2);    // 14,加法
+		alert("abc" - 1);		//	NaN，其实就是错误
+		
+		 alert(true + 1);	// 2	
+		 alert(0 + 1);	// 1 	
+		
+		 var num = 3710;
+		if(num == 15){
+			alert("abc");
+		}else{
+			alert("ab2c");
+		}
+		
+		
+		var num3 =15;		// 数字
+		var str3 = "15";	// 字符串
+		
+		alert(num3 == str3);	// true，比值
+		alert(num3 === str3);	// false，比类型和值
+		 
+		var n = 3;
+    	var m;
+    	m = ++n;
+		alert("m="+m+","+"n="+n);	
+		
+		
+		var a =3,b=6,c=2;
+		alert((a>b?a:b)>c?(a>b?a:b):c);//找出最大值
+		
+	</script>
+</html>

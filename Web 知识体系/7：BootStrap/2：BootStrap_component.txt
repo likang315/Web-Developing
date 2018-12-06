@@ -1,0 +1,86 @@
+
+可复用的组件
+
+1：Glyphicons 字体图标
+	通过 glyphicon glyphicon-*  类 ，应用<span> 标签中，并且不能包含任何内容，并且设置aria-hidden="true属性
+
+
+2：下拉菜单
+    1：通过  .dropdown 和 .dropup 类 添加下拉菜单和上拉菜单
+    2：对齐
+	.dropdown-menu 添加 .dropdown-menu-right 类可以让菜单右对齐，.dropdown-menu-left左对齐
+    3：标题
+	无序列表中可以添加标题，以及对应的链接
+    4：禁用菜单项
+	在<li> 元素中添加 .disabled 类,从而禁用相应的菜单项
+
+
+3：按钮组
+  	通过按钮容器把一组按钮放在同一行里
+   1：通过 .btn-group 类，和 按钮组合 role="group" ,工具栏是role="toolbar",来声明按钮组
+   2：按钮工具栏
+	把一组 <div class="btn-group"> 组合进一个 <div class="btn-toolbar"> 中就可以做成按钮工具栏组件
+   3：尺寸
+	通过 .btn-group-* (sm,xs,lg) 类设置尺寸
+   4：嵌套
+	想要把下拉菜单混合到一系列按钮中，只须把 .btn-group 放入另一个 .btn-group 中
+   5：垂直排列
+	把.btn-group 类 修改为 .btn-group-vertical
+   6：分裂式按钮下拉菜单
+
+
+4：输入框组
+	为 .input-group 赋予 .input-group-addon 或 .input-group-btn 类，可以给 .form-control 的前面或后面
+	添加额外的元素
+   1：尺寸
+	通过  input-group-lg 和input-group-ms  类来为输入框组设置尺寸
+   2：额外元素的按钮
+	为输入框组添加按钮需要额外添加一层嵌套,不是 .input-group-addon，而是添加 .input-group-btn 来包裹按钮元素
+   3：额外元素的按钮式下拉菜单
+	参考Bootstrap
+  
+
+5：导航
+   1：导航组件都依赖 .nav 类，状态类也是共用的
+   2：标签页
+	用 <ul >  表示导航 .nav-tabs 类依赖 ,nav 基类
+   3：胶囊式标签页
+	 通过 .nav-pills  类 
+   4：带有下拉菜单的标签页
+	通过 .nav-tabs 类 再加一些HTML代码 即可
+
+
+6：分页：提供简单的带有展页码的分页组件
+   1：通过无序列表<ul> 中添加 .pagination 类，使用分页
+   2：尺寸
+	通过在<ul> 中添加 .pagination-lg 或者 .pagination-sm 类改变尺寸
+
+7：徽章：给链接、导航等元素嵌套 <span class="badge"> 元素，可以很醒目的展示新的或未读的信息条目
+
+8：巨幕：一个轻量、灵活的组件，它能延伸至整个浏览器视口来展示网站上的关键内容。
+	通过给<div> 中添加 .jumbotron 类 设置巨幕
+
+9：页头：页头组件能够为 h1 标签增加适当的空间，并且与页面的其他部分形成一定的分隔
+	通过给<div> 中添加 .page-header 类 设置页头
+
+10：进度条：带有提示的进度条
+	通过<div> 中使用 .progress 类来添加进度条，还可以显示当前进度
+
+11：媒体对象：一个抽象的样式，用以构建不同类型的组件，这些组件都具有在文本内容的左或右侧对齐的图片
+	通过<div> 中使用 .media 类添加媒体对象
+
+12：列表组
+	通过给<ul> 中添加 .list-group 类和<li> 中添加 .list-group-item 类来使用列表组，可以添加徽章和超链接
+
+13：具有响应式特性的嵌入内容
+	根据被嵌入内容的外部容器的宽度，自动创建一个固定的比例，从而让浏览器自动确定尺寸，能够在各种设备上缩放
+	通过给<div> 中添加 .embed-responsive embed-responsive-4by3 类创建
+
+
+
+	
+
+ 
+
+
+

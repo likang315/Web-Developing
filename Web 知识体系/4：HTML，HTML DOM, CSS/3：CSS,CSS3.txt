@@ -1,0 +1,184 @@
+﻿
+ CSS (Cascading Style Sheets) 层叠样式表
+	* 样式定义如何显示HTML元素，样式存储在样式表中
+	* CSS将网页显示的效果（样式）和内容分离 （降低耦合度）
+ CSS3 ：在CSS的基础之上添加了一些没有的属性
+
+1：CSS 由两个部分构成：选择器，以及一条或多条声明
+	选择器：是您需要改变样式的 HTML 元素
+	声明：由一个属性和一个值组成，属性和值被冒号分开
+	CSS声明总是以分号(;)结束，声明组以大括号({})括起来
+	如果一个属性有多个值，值与值之间使用空格隔开
+		例子 div{ xx:yy zz aa }
+	CSS注释： "/*" 开始, 以 "*/" 结束
+
+	
+2：插入样式表
+
+	1：内联样式，属性 style="CSS的代码"，会将表现和内容混在一起，慎用
+	2：内部样式表
+		* 当单个文档需要特殊的样式时，选择内部样式表
+		* 使用<style>   </style> 标签在文档头部定义内部样式表
+			<style type="text/css">
+				CSS代码
+			</style>
+
+	3: 外部样式表
+		* 当样式需要应用很多页面时，选择样式表
+		* 通过一个<link> 标签来链接样式表，写在<head></head>中间（经常使用）	
+			rel="stylesheet" 代表当前和引入文件之间的关系(样式表)
+			type="text/css"
+			href：引入CSS文件的URL
+	4：多重样式优先级
+	   （内联样式）> （内部样式） >（外部样式）> 浏览器默认样式		
+
+
+				
+3：CSS的优先级
+	* 从上到下，由外到内，优先级是从低到高的	（一般情况下）
+	* 标签名选择器 < 类选择器 < ID选择器 < style属性（特殊情况下)
+			
+
+
+4：CSS的选择器
+		* 标签名选择器	标签{}
+						
+		* id选择器
+			* 可以为标有特定 id 的 HTML 元素指定特定的样式。
+			* HTML元素以id属性来设置id选择器,CSS 中 id 选择器以 "#" 来定义。
+			
+			<p id="para1">Hello World!</p>
+			
+			#pada1{
+			
+			}
+
+		* class选择器
+			* 用于描述一组元素的样式，class 选择器有别于id选择器，class可以在多个元素中使用
+		  	* class 选择器在HTML中以class属性表示, 在 CSS 中，类选择器以一个点"."号显示：
+			
+			<p class="para1">Hello World!</p>
+	
+			.para1{
+			
+			}
+		
+		* 分组选择器：具有相同样式的元素
+			每个选择器用逗号分隔
+				h1,h2,p
+				{
+					color:green;
+				}
+
+		* 嵌套选择器：选择器内部的选择器的样式
+			注意选择器的优先级顺序
+				 #id .g_list img{}
+	
+			
+
+5：属性
+	1：背景
+		backgroud 	设置所有的背景属性,有顺序
+		background-color 	背景颜色 
+		background-image 	背景图像
+		background-repeat 	修改背景图像，水平或垂直平铺
+			值：水平    repeat-x; 
+			    垂直    repeat-y; 
+			    不平铺  repeat-no;
+		background-Origin       背景图像的位置区域
+			内容区域    content-box;
+			
+		background-position 	背景图像的位置 	
+		background-size 	背景图片的尺寸 	
+		background-clip 	规定背景的绘制区域	
+		background-attachment 	规定背景图像是否固定或者随着页面的其余部分滚动	
+		
+	2：文本
+		color 	设置文本颜色
+		direction 	设置文本方向
+		letter-spacing 	设置字符间距
+		word-spacing 	设置字间距
+		line-height 	设置行高
+		text-align	设置文本的对齐方式
+		text-decoration 用来删除链接的上，下划线
+		text-transform 	控制元素中的字母
+
+	3：字体
+		font-family 	指定文本的字体系列,如果浏览器不支持第一种字体，他将尝试下一种字体,字体之间用 ， 间隔
+		font-size 	指定文本的字体大小
+		font-style 	指定文本的字体样式（倾斜度）
+		font-weight 	指定字体的粗细。
+
+	4：链接
+  		  a:link - 正常，未访问过的链接
+   		  a:visited - 用户已访问过的链接
+    		  a:hover - 当用户鼠标放在链接上时
+		  a:active - 链接被点击的那一刻
+						a:link {color:#000000;}    
+ 
+	5：表格
+		border		设置边框
+		Width，height   表格的宽度和高度
+		text-align	文本水平对齐
+		vertical-align  文本垂直对齐
+		padding		表格填充（大小）
+						table, td, th
+						{
+    						 	border:1px solid green;
+					        }
+	
+	6： 盒子模型(Box Model)  div{}
+		Margin(外边距) 	
+			margin:auto;    居中对齐	
+			margin-top
+			margin-bottom
+			margin-right
+			margin-left
+
+		Border(边框)
+			border-style	边框的样式
+			border-width    边框宽度
+			border-color    边框颜色
+			border-radius 	圆角边框
+			border-image 	图像边框
+			
+		Padding(内边距) 
+			padding-top
+			padding-bottom:
+			padding-right
+			padding-left
+
+		Content(内容) 
+
+	   当指定一个CSS元素的宽度和高度属性时，你只是设置内容区域的宽度和高度
+
+
+	7：Display(显示) 与 Visibility（可见性)
+	   隐藏元素 - display:none或visibility:hidden
+		
+		visibility:hidden可以隐藏某个元素，但隐藏的元素仍需占用与未隐藏之前一样的空间，影响格
+		display:none可以隐藏某个元素，且隐藏的元素不会占用任何空间
+
+	8：Position（定位）
+		relative:绝对定位
+		absolute:相对定位
+	
+	
+	9：overflow 
+		控制内容溢出元素框时，在对应的元素区间内添加滚动条
+		scroll 	        内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容
+		visible 	默认值,内容不会被修剪，会呈现在元素框之外
+		hidden   	内容会被修剪，并且其余内容是不可见的	
+
+	
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,171 @@
+﻿
+Web开发：
+    1：HTML 定义了网页的内容
+    2：CSS 描述了网页的布局，样式
+    3：JavaScript 网页的行为
+
+JavaScript（JavaScript简写js，文件的后缀名也是  demo.js)
+	JavaScript 一种轻量级的脚本编程语言
+	JavaScript 是可插入 HTML 页面的编程代码
+	JavaScript 在浏览器读取代码是逐行执行，不与预先编译
+
+它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，用来给HTML网页增加动态功能
+
+
+			
+1：javascript使用方式
+
+	脚本可位于 HTML 的 <body> 或 <head> 部分中，或者同时存在于两个部分中，通常的做法是把函数放入 <head> 部分中，
+	或者放在页面底部
+
+	* 把js和HTML的结合一起。（2两种方式）
+
+		* HTML的文件提供了一个标签，
+			<script type="text/javascript">
+				js的代码
+			</script>
+					
+		* 引入外部的文件，有一个外部的文件,编写js文件。
+			<script  type="text/javascript" src="引入js文件(相对路径)">
+						
+
+
+2：Js 的输出
+	JavaScript 没有任何打印或者输出的函数。
+
+JavaScript 可以通过4种方式来输出数据
+
+	1：window.alert() 弹出警告框
+	2：document.write() 方法将内容写到 HTML文档中
+	3：innerHTML() 写入到 HTML 元素，显示输出
+	3：console.log() 写入到浏览器的控制台（console）
+
+
+3：Js的语法
+  1：字面量(一般固定值称为字面量）
+	数字（Number）字面量 可以是整数或者是小数，或者是科学计数(e)
+	字符串（String）字面量 可以使用单引号或双引号
+	数组（Array）字面量 定义一个数组
+	对象（Object）字面量 定义一个对象
+	函数（Function）字面量 定义一个函数
+
+  2：变量
+	 var(关键字): 来定义变量， 使用等号来为变量赋值
+		声明无值的变量，其值实际上是 undefined
+  3：JS的运算符
+	=  +  -  *  /  	==  !=  <  >  
+  4：Js 注释
+	// ,/* */
+  5：Js 区分大小写
+  6：Js 使用 Unicode 字符集
+
+
+4：Js 的语句
+	1：分号(;) 用于分隔 JavaScript 语句
+	2：Js 代码是 Js 语句的序列，浏览器按照编写顺序逐条执行每条语句
+	3： JavaScript 语句标识符 (关键字)，其余同 c语言
+		1：function，定义函数
+		2：var .定义变量
+	4：Js 会忽略多余的空格，可以向脚本添加空格，来提高其可读性
+	5：使用反斜杠(\)对代码行进行换行
+
+
+5：Js 数据类型
+	1：基本类型：字符串（String）、数字(Number)、布尔(Boolean)、空（Null）、未定义（Undefined）、Symbol
+	   引用数据类型：对象(Object)、数组(Array)、函数(Function)
+	2：Js 使用动态类型赋值
+	3：boolean :ture 或者 false
+	4：Onject 由花括号{}分隔,在括号内部，对象的属性以名称和值对的形式(name : value)来定义，属性由逗号分隔
+	   Js 中对象类似于Java中的对象，使用方式相同
+	5：Undefined 这个值表示变量不含有值，可以通过将变量的值设置为 null来清空变量。
+	
+
+6：Js 事件
+	onchange 	HTML 元素改变
+	onclick 	用户点击 HTML 元素
+	onmouseover 	用户在一个HTML元素上移动鼠标
+	onmouseout 	用户从一个HTML元素上移开鼠标
+	onkeydown 	用户按下键盘按键
+	onload 		浏览器已完成页面的加载
+
+<button onclick="this.innerHTML=Date()">现在的时间是?</button>
+
+
+7：Js 字符串
+	1：字符串可以存储一系列字符，字符串可以是插入到引号中的任何字符，你可以使用单引号或双引号
+	2：反斜杠是一个转义字符
+	3：可以是对象，new关键字将字符串创建为对象
+	4：属性：length 返回字符串的长度	
+	5：方法：Java一样
+
+8：比较运算符
+	== 	等于 
+	=== 	绝对等于（值和类型均相等）
+			
+9：typeof 操作符：测量变量或表达式的类型
+    if-else,switch,while,for,break,continue 用法同Java
+
+10：Js 错误 
+	 throw、try 和 catch
+
+
+11：Js 函数
+	函数是由事件驱动的或者当它被调用时执行的可重复使用的代码块
+    
+    函数的声明
+	function myFunction(argument1,argument2)
+	{
+		代码
+	}
+
+     构造函数  var fun=new Function（）；
+
+     函数表达式  var x = function (a, b) {return a * b};  实际上是匿名函数
+
+     函数提升
+ 	提升（Hoisting）是 JavaScript 默认将当前作用域提升到前面去的的行为。
+	调用声明之前
+					
+     自调用函数：通过表达式后面跟着()，可以自己调用，实际上是匿名自我调用的函数
+	(function(){
+						
+		   })()；
+     Js 函数是对象：有 属性 和 方法
+	arguments.length 属性返回函数调用过程接收到的参数个数
+	toString() 方法将函数作为一个字符串返回,用函数名调用
+
+12：函数的参数
+      函数显式参数(Parameters)在函数定义时列出,形参
+      函数隐式参数(Arguments)在函数调用时传递给函数真正的值,实参
+
+	JS 函数定义显式参数时没有指定数据类型
+	JS 函数对隐式参数没有进行类型检测
+	JS 函数对隐式参数的个数没有进行检测
+
+   如果函数在调用时未提供隐式参数，参数会默认设置为： undefined
+   
+   如果函数调用时设置了过多的参数，参数将无法被引用，因为无法找到对应的参数名。 只能使用 arguments 对象来调用
+   JavaScript 函数有个内置的对象 arguments 对象,此包含了函数调用的参数数组
+
+
+13：函数的调用
+	JS 函数有 4 种调用方式,每种方式的不同在于 this 的初始化
+      
+     1：作为一个函数调用,函数是默认的全局对象，并且函数作为全局对象调用时，会使 this 的值成为全局对象
+     2：将函数定义为对象的方法，通过对象调用，此时this 的值成为对象本身
+     3：函数调用前使用了 new 关键字, 则是调用了构造函数， 此时this 关键字没有任何的值
+     4：call() 和 apply() 是预定义的函数方法。
+	两个方法可用于调用函数，两个方法的第一个参数必须是对象本身。
+	两者的区别在于第二个参数： apply传入的是一个参数数组，也就是将多个参数组合成为一个数组传入，
+				   而call则作为call的参数传入（从第二个参数开始）
+
+
+
+
+
+
+
+
+
+
+

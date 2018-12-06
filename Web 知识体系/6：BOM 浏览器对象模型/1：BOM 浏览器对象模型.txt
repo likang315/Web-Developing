@@ -1,0 +1,92 @@
+
+BOM 浏览器对象模型  -----(Brower Object Model)
+	BOM：就是javaScript和浏览器对象进行交互的接口
+			
+1：Window  窗口对象:浏览器窗口
+	所有 JavaScript 全局对象、函数以及变量均自动成为 window 对象的成员
+  全局变量是 window 对象的属性
+  全局函数是 window 对象的方法,甚至 HTML DOM 的 document 也是 window 对象的属性之一
+
+  Window 尺寸
+    window.innerHeight - 浏览器窗口的内部高度(包括滚动条)
+    window.innerWidth - 浏览器窗口的内部宽度(包括滚动条)
+
+  方法：
+	
+    window.open() - 打开新窗口
+    window.close() - 关闭当前窗口
+    window.moveTo() - 移动当前窗口
+  
+
+2：Window Screen  对象包含有关用户屏幕的信息
+	window.screen对象在编写时可以不使用 window 这个前缀
+    方法：
+	screen.availWidth 属性返回访问者屏幕的宽度
+	screen.availHeight 属性返回访问者屏幕的高度
+	pixelDepth 	返回显示屏幕的颜色分辨率
+
+3：Window Location
+	window.location 对象用于获得当前页面的地址 (URL)，并把浏览器重定向到新的页面
+    属性：
+	location.href 返回当前页面的 URL
+    	location.hostname 返回 web 主机的域名
+    	location.pathname 返回当前页面的路径和文件名
+    	location.port 返回 web 主机的端口 （80 或 443）
+    	location.protocol 返回所使用的 web 协议（http:// 或 https://）
+   方法：
+	location.assign() 方法加载新的文档
+
+
+4：Window History
+	window.history 对象包含浏览器的历史
+  方法：	
+	
+    history.back() 方法加载历史列表中的前一个 URL
+    history forward() 方法加载历史列表中的下一个 URL
+		
+				
+5：Window Navigator
+	window.navigator 对象包含有关访问者浏览器的信息
+  属性：
+		
+	navigator.appVersion    返回浏览器的平台和版本信息。
+	
+
+6：JS 弹窗
+	可以在 JavaScript 中创建三种消息框：警告框、确认框、提示框
+
+   1:警告框经常用于确保用户可以得到某些信息,当警告框出现后，用户需要点击确定按钮才能继续进行操作
+	window.alert() 方法可以不带上window对象，直接使用alert()方法
+   
+   2:确认框通常用于验证是否接受用户操作,当确认卡弹出时，用户可以点击 "确认" 或者 "取消" 来确定用户操作
+   	当你点击 "确认", 确认框返回 true， 如果点击 "取消", 确认框返回 false
+	window.confirm() 方法可以不带上window对象，直接使用confirm()方法
+
+   3:提示框经常用于提示用户在进入页面前输入某个值,当提示框出现后，用户需要输入某个值，然后点击确认或取消按钮才能继续操纵
+     如果用户点击确认，那么返回值为输入的值,如果用户点击取消，那么返回值为 null。
+	window.prompt() 方法可以不带上window对象，直接使用prompt()方法。
+
+  注意：弹窗使用 反斜杠 (\n) 来设置换行
+
+
+7：Js 计时事件
+	JavaScript 一个设定的时间间隔之后来执行代码
+   1：window.setInterval() 方法可以不使用window前缀，直接使用函数setInterval()，间隔多少毫秒之后持续执行
+	 第一个参数是函数（function），第二个参数间隔的毫秒数
+	var myVar=setInterval(function(){方法名()},1000);
+   2：clearInterval() 方法用于停止 setInterval() 方法执行的函数代码
+	参数为setInterval的变量名
+   3：setTimeout() 方法会返回某个值，返回值被储存在的变量中,多少毫秒之后执行一次
+	setTimeout(function(){alert("Hello")},3000);
+   4：clearTimeout() 取消setTimeout 定时事件
+
+	
+
+
+					 
+			
+			
+		
+				 		
+		
+		

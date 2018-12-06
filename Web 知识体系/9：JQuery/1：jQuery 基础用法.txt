@@ -1,0 +1,51 @@
+
+jQuery:是一个JavaScript函数库,目前最流行的 JS 框架，而且提供了大量的扩展
+
+1：jQuery的安装
+	
+    jquery.com 下载 jQuery 库
+    Production version - 用于实际的网站中，已被精简和压缩。
+    Development version - 用于测试和开发（未压缩，是可读的代码）
+  引入
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+2：jQuery语法
+	通过选取 HTML 元素，并对选取的元素执行某些操作
+	基础语法： $(selector).action()
+
+  在文档完全加载完成之后执行
+	$(function(){
+  		//jQuery 代码...
+	});
+
+3：jQuery 选择器
+	1:  元素选择器
+		$("元素名")
+	2:  #id 选择器
+		$("#id值") 
+	3:  .class 选择器
+		$(".class值")
+	4：$("*") 	选取所有元素 	
+	   $(this) 	选取当前 HTML 元素
+
+
+4：jQuery 事件
+	1:click() 	:当按钮点击事件被触发时会调用一个函数
+	2:dblclick()    :当双击元素时触发 dblclick 事件
+	3:mousedown()   :当鼠标指针移动到元素上方，并按下鼠标按键时，会发生 mousedown 事件
+	4:hover()	:用于模拟光标悬停事件
+	5:focus()	:当元素获得焦点时，发生 focus 事件
+	6:blur()	:当元素失去焦点时，发生 blur 事件	
+	7:change()	:当元素的值改变时发生 change 事件（仅适用于表单字段）
+	8:submit()	:当提交表单时，会发生 submit 事件
+
+
+5：AJAX get() 和 post() 方法
+	$.get(URL,callback); 		通过 HTTP GET 请求从服务器上请求数据	
+	$.post(URL,data,callback);	通过 HTTP POST 请求向服务器提交数据。
+
+
+
+
+
+

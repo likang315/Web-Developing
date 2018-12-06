@@ -1,0 +1,85 @@
+								
+JavaScript 中的所有事物都是对象，对象只是一种特殊的数据,对象拥有属性和方法
+	
+JavaScript for...in 语句循环遍历对象的属性,
+	for (variable in object)
+	{
+    		执行的代码……
+	}
+	
+
+1:Number 对象
+	JavaScript 只有一种数字类型,均为 64 位,所有的数字都是由 浮点型类型
+
+  无穷大（Infinity）
+     当数字运算结果超过了JavaScript所能表示的数字上限（溢出），结果为一个特殊的无穷大（infinity）值，
+     当负数的值超过了JavaScript所能表示的负数范围，结果为负无穷大，在JavaScript中以-Infinity表示
+  
+  NaN 属性是代表非数字值的特殊值
+
+  数字可以是数字或者对象
+	var x = 123;             
+	var y = new Number(123);   //不相等
+  方法：
+	toString()
+	valueOf()
+
+	
+2：String（字符串） 对象
+	一个字符串存储了一系列字符，可以使用单引号或双引号
+   
+   属性：length：字符串的长度	
+   方法：
+		charAt(index)			返回指定位置的字符
+		indexOf(str,fromIndex)	从前往后检索字符串，没有返回-1
+		lastIndexOf(str,fromIndex)	从后向前检索字符串
+		replace(要替换的字符串,替换成啥)		
+		substring(start,stop)		截取字符串
+		substr(start,length)		截取字符串，从哪开始，截取多长
+ 		match()				查找是否有匹配
+
+3：Date（日期）对象
+	日期对象用于处理日期和时间
+
+
+4： Array（数组） 对象
+	var myCars=new Array("Saab","Volvo","BMW");
+	所有的JavaScript变量都是对象，所以可以在数组中有不同的变量类型
+
+
+5：Math（算数）对象
+	Math（算数）对象：执行常见的算数任务
+ 方法：
+	round()
+		返回四舍五入值
+	random()
+		返回 0 到 1 之间的随机数。
+	max()
+		返回两个给定的数中的较大的数
+	min()
+		返回两个给定的数中的较小的数
+
+	
+6： RegExp 对象
+	RegExp：是正则表达式（regular expression）的简写
+	var patt=new RegExp(pattern,modifiers);
+	var patt=/pattern/modifiers; 
+
+  RegExp 修饰符（modifirers）:修饰符用于执行不区分大小写和全文的搜索
+	i - 修饰符是用来执行不区分大小写的匹配
+	g - 修饰符是用于执行全文的搜索（而不是在找到第一个就停止查找,而是找到所有的匹配）
+
+
+  方法：
+	test()方法搜索字符串指定的值，根据结果并返回真或假（true 和 false）
+	exec() 方法检索字符串中的指定值,返回值是被找到的值,如果没有发现匹配，则返回 null
+
+
+
+		
+		
+		
+		
+		
+		
+		

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE book [
+<!ELEMENT book (title,author)>
+<!ATTLIST book xmlns CDATA #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+]>
+
+<book xmlns="http://www.sunxin.org/bk">
+	<title></title>
+	<author></author>
+</book>
