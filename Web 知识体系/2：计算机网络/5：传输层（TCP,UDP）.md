@@ -13,7 +13,7 @@
 
 ![](G:\Web-Developing\Web 知识体系\2：计算机网络\5：传输层\TCP,UDP.png)
 
-
+###### 											    TCP 采用流模式与UDP采用数据报模式 
 
 
 

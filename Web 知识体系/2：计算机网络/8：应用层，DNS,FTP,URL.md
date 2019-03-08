@@ -13,7 +13,7 @@ DNS 服务器负责向 internet 上的其他计算机通知有关你的域名和
 
 ### DHCP
 
-![](G:\Web-Developing\Web 知识体系\2：计算机网络\8：应用层\DHCP.png)
+![](G:\Web-Developing\Web 知识体系\2：计算机网络\5：传输层\DHCP.png)
 
 ### URL
 
