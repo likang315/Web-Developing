@@ -9,7 +9,7 @@
 
 ![](G:\Web-Developing\Web 知识体系\2：计算机网络\5：传输层\TCP报文.png)
 
-### TCP和UDP的区别
+### TCP 和 UDP的区别
 
 ![](G:\Web-Developing\Web 知识体系\2：计算机网络\5：传输层\TCP,UDP.png)
 
