@@ -2,11 +2,11 @@
 
 ### 就是在网络中找到另一台计算机在哪里，是否属于同一个子网，选路和转发
 
-![](G:\Web-Developing\Web 知识体系\2：计算机网络\4：网络层\网络层.png)
+![网络层.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%EF%BC%9A%E7%BD%91%E7%BB%9C%E5%B1%82/%E7%BD%91%E7%BB%9C%E5%B1%82.png?raw=true)
 
 ## IP报文，IP地址
 
-![](G:\Web-Developing\Web 知识体系\2：计算机网络\4：网络层\IP报文格式,Ip.png)
+![IP报文格式,Ip.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%EF%BC%9A%E7%BD%91%E7%BB%9C%E5%B1%82/IP%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F,Ip.png?raw=true)
 
 ### IP:用于计算机之间的通信，无连接的通信协议，网络层
 
@@ -21,13 +21,13 @@
    2：0位压缩表示法：0:0:0:0:0:0:0:1 → ::1
       冒号十六进制记法允许零压缩，即一串连续的0可以用一对冒号取代 "：："
 
-### 内嵌IPv4地址表示法：X:X:X:X:X:X:d.d.d.d，前96 bit采用冒分十六进制表示，而最后32bit地址则使用IPv4的点分十进制表示
+### 内嵌IPv4地址表示法：X:X:X:X:X:X:d.d.d.d，前96 bit采用冒分十六进制表示，而最后 32bit 地址则使用IPv4的点分十进制表示
 
 每一个计算机必须有一个 IP 地址才能够连入因特网，并且IP是独一无二的
 
 ### 子网划分，ARP，无分类域间路由
 
-![](G:\Web-Developing\Web 知识体系\2：计算机网络\4：网络层\子网划分,ARP协议.png)
+![子网划分,ARP协议.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%EF%BC%9A%E7%BD%91%E7%BB%9C%E5%B1%82/%E5%AD%90%E7%BD%91%E5%88%92%E5%88%86,ARP%E5%8D%8F%E8%AE%AE.png?raw=true)
 
 ARP协议通过**广播的形式**，给同一个子网中的每台电脑（包含对方的ip）,对方收到这个数据包，会把IP和自己的比较，若相同，则返回自己的MAC地址，否则就丢弃
 
@@ -37,28 +37,24 @@ ARP协议通过**广播的形式**，给同一个子网中的每台电脑（包�
 
 ### 互联网控制消息协议ICMP
 
-![](G:\Web-Developing\Web 知识体系\2：计算机网络\4：网络层\ICMP.png)
+![ICMP.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%EF%BC%9A%E7%BD%91%E7%BB%9C%E5%B1%82/ICMP.png?raw=true)
 
 
 
-
-
-### IP路由器,又称路由器
+### IP 路由器,又称路由器
 
 **路由选择：**当一个IP数据包从一台计算机被发送，它会到达一个IP路由器，路由器负责将这个包路由至它的目的地，或者间接地通过其他的路由器
 在一个相同的通信中，一个包所经由的路径可能会和其他的包不同。而路由器负责根据通信量、网络中的错误或者其他参数来进行正确地寻址
 
-![](G:\Web-Developing\Web 知识体系\2：计算机网络\4：网络层\路由器.png)
+![路由器.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%EF%BC%9A%E7%BD%91%E7%BB%9C%E5%B1%82/%E8%B7%AF%E7%94%B1%E5%99%A8.png?raw=true)
 
 ### 路由表，路由协议
 
-![](G:\Web-Developing\Web 知识体系\2：计算机网络\4：网络层\路由表，路由协议.png)
+![路由表，路由协议.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%EF%BC%9A%E7%BD%91%E7%BB%9C%E5%B1%82/%E8%B7%AF%E7%94%B1%E8%A1%A8%EF%BC%8C%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE.png?raw=true)
+
+
 
 ### Dikastra算法
 
-![](G:\Web-Developing\Web 知识体系\2：计算机网络\4：网络层\Dikastra.png)
-
-
-
-
+![Dikastra.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%EF%BC%9A%E7%BD%91%E7%BB%9C%E5%B1%82/Dikastra.png?raw=true)
 

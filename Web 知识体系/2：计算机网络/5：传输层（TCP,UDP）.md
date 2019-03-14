@@ -3,17 +3,58 @@
 当应用程序希望通过 TCP 与另一个应用程序通信时，它会发送一个通信请求。这个请求必须被送到一个确切的地址。
 在双方"握手"之后，TCP 将在两个应用程序之间建立一个全双工 (full-duplex) 的通信,这个全双工的通信将占用两个计算机之间的通信线路，直到它被一方或双方关闭为止
 
-![](G:\Web-Developing\Web 知识体系\2：计算机网络\5：传输层\port，socket.png)
+![port，socket.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/port%EF%BC%8Csocket.png?raw=true)
 
 ### TCP协议，TCP报文，三次握手
 
-![](G:\Web-Developing\Web 知识体系\2：计算机网络\5：传输层\TCP报文.png)
+![TCP报文.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/TCP%E6%8A%A5%E6%96%87.png?raw=true)
 
 ### TCP 和 UDP的区别
 
-![](G:\Web-Developing\Web 知识体系\2：计算机网络\5：传输层\TCP,UDP.png)
+![TCP,UDP.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/TCP,UDP.png?raw=true)
+
+
 
 ###### 											    TCP 采用流模式与UDP采用数据报模式 
+
+
+
+### TCP可靠性主要依赖于：
+
+##### 1：头部检验和 
+
+TCP检验和的计算与UDP一样，在计算时要加上12byte的伪首部，检验范围包括TCP首部及数据部分，但是UDP的检验和字段为可选的，而TCP中是必须有的
+
+计算方法为：在发送方将整个报文段**分为多个16位的段，然后将所有段进行反码相加，将结果存放在检验和字段**中，接收方用相同的方法进行计算，如最终结果为检验字段所有位是全1则正确（UDP中为0是正确），否则存在错误
+
+##### 2：序号 
+
+TCP将每个字节的数据都进行了编号，这就是序列号
+序列号的作用： 
+	a、丢失某个字节时，可以立即知道
+	b、保证数据的按序到达 
+	c、提高效率，可实现多次发送，一次确认 
+	d、去除重复数据 
+
+##### 3：确认应答机制（ ACK ） 
+
+TCP通过确认应答机制实现可靠的数据传输。在TCP的首部中有一个标志位——ACK，此标志位表示确认号是否有效
+
+##### 4：超时重传机制 
+
+当报文发出后在一定的时间内未收到接收方的确认，发送方就会进行重传（通常是在发出报文段后设定一个定时器，到点了还没有收到应答则进行重传）
+
+##### 5：连接管理机制 （三握，四挥）
+
+##### 6：流量控制 （滑动窗口协议）
+
+##### 7：拥塞控制
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-### 域名:是计算机的唯一名称
+### 域名：是计算机的唯一名称
 
    域名是需要注册的，当域名被注册后，就会被添加到大的域名注册商那里，包括被保存在 DNS 服务器的 IP 信息与域名有一种映射关系
 
@@ -7,19 +7,17 @@ DNS 服务器负责向 internet 上的其他计算机通知有关你的域名和
 
 虚假域名:被注册到别的域名之下的子域名
 
-![](G:\Web-Developing\Web 知识体系\2：计算机网络\8：应用层\DNS.png)
+![DNS.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/8%EF%BC%9A%E5%BA%94%E7%94%A8%E5%B1%82/DNS.png?raw=true)
 
 
 
 ### DHCP
 
-![](G:\Web-Developing\Web 知识体系\2：计算机网络\5：传输层\DHCP.png)
+![DHCP.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/DHCP.png?raw=true)
 
 ### URL
 
-![](G:\Web-Developing\Web 知识体系\2：计算机网络\8：应用层\URL.png)
-
-
+![URL.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/8%EF%BC%9A%E5%BA%94%E7%94%A8%E5%B1%82/URL.png?raw=true)
 
 ###### TCP/IP协议族：是不同的通信协议的大集合
 
