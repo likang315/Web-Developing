@@ -16,6 +16,8 @@ HTTP默认 端口号为 80
 
 ### 1：HTTP报文格式
 
+![请求报头.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/3%EF%BC%9AHTTP%EF%BC%8CHTTPS/%E8%AF%B7%E6%B1%82%E6%8A%A5%E5%A4%B4.png?raw=true)
+
 ##### 请求报文：
 
 请求报头：       请求方法 请求URL HTTP协议版本
