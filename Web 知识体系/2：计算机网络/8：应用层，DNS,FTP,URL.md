@@ -5,7 +5,7 @@
 DNS 指的是域名系统 (Domain Name System)，提供域名到IP地址之间的解析服务，应用层
 DNS 服务器负责向 internet 上的其他计算机通知有关你的域名和地址的信息，DNS就会将域名转化成便于机器识别的IP地址
 
-虚假域名:被注册到别的域名之下的子域名
+虚假域名：被注册到别的域名之下的子域名
 
 ![DNS.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/8%EF%BC%9A%E5%BA%94%E7%94%A8%E5%B1%82/DNS.png?raw=true)
 

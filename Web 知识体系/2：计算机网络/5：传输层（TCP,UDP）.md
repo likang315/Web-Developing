@@ -5,11 +5,11 @@
 
 ![port，socket.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/port%EF%BC%8Csocket.png?raw=true)
 
-### TCP协议，TCP报文，三次握手
+### TCP 协议，TCP报文，三次握手
 
 ![TCP报文.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/TCP%E6%8A%A5%E6%96%87.png?raw=true)
 
-### TCP 和 UDP的区别
+### TCP 和 UDP 的区别
 
 ![TCP,UDP.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/TCP,UDP.png?raw=true)
 
@@ -36,7 +36,7 @@ TCP将每个字节的数据都进行了编号，这就是序列号
 	c、提高效率，可实现多次发送，一次确认 
 	d、去除重复数据 
 
-##### 3：确认应答机制（ ACK ） 
+##### 3：确认应答机制（ ACK=1 ） 
 
 TCP通过确认应答机制实现可靠的数据传输。在TCP的首部中有一个标志位——ACK，此标志位表示确认号是否有效
 
