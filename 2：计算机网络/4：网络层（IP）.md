@@ -1,6 +1,8 @@
 ### 网络层：IP
 
-就是在网络中找到另一台计算机在哪里，是否属于同一个子网，选路和转发
+------
+
+在网络中找到另一台计算机在哪里，是否属于同一个子网，选路和转发
 
 ##### 1：互联网的定义：
 
@@ -30,7 +32,7 @@
 
 ##### 4：IP报文格式
 
-![IP报文格式,Ip.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%EF%BC%9A%E7%BD%91%E7%BB%9C%E5%B1%82/IP%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F,Ip.png?raw=true)
+![IP报文格式,Ip](/Users/likang/Code/Git/Web-Developing/2：计算机网络/网络层/IP报文格式,Ip.png)
 
 - 标示符：一个分组在传输过程中可能被分片，该字段用于标示那些分片属于同一个分组中
 - 分片标志：标示该分组是否被分片传输
@@ -67,34 +69,49 @@
 
 ##### 6：子网划分，ARP，无分类域间路由
 
-![子网划分,ARP协议.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%EF%BC%9A%E7%BD%91%E7%BB%9C%E5%B1%82/%E5%AD%90%E7%BD%91%E5%88%92%E5%88%86,ARP%E5%8D%8F%E8%AE%AE.png?raw=true)
+- 地址分配规则：
+  - 每个路由器的接口连接一个IP子网，每个IP子网的对应一个网络ID，一个IP子网的接口的网络ID相同，主机ID不同，IP子网，又称**网段**
 
-ARP协议通过**广播的形式**，给同一个子网中的每台电脑（包含对方的ip）,对方收到这个数据包，会把IP和自己的比较，若相同，则返回自己的MAC地址，否则就丢弃
+##### 子网划分
 
-需要**IP子网来划分，要不然都所有连接的电脑都广播的话**，就会造成网络阻塞
+1. 定长子网划分：将分类地址中的主机ID进一步分成网络ID和主机ID
+   - IP：网络ID—子网ID—主机ID
+   - 子网的内部路由器使用前缀确定子网：网路ID—子网ID
+   - IP地址：xxx.xxx.xxx.xxx/24，子网掩码位数占24bit
+2. 可变长子网掩码（VLSM）：
+   - 为不同的子网使用不同的掩码
 
-若**不处于同一个子网下，就发送给网关**，让网关转发放到目标子网中
+##### 7：ARP协议（Address Resolution Protocol）-RARP
 
-### 互联网控制消息协议ICMP
+- 地址解析协议，是根据IP地址获取MAC地址的一个TCP/IP协议
+- 流程
+  - 本地主机将包含目标IP地址的请求消息广播到局域网络上的所有主机，目的主机看到是自己的IP时，会单播一条响应消息，包含自己的MAC地址，本地接收响应消息，以此确定目标的物理地址；收到返回消息后将该IP地址和物理地址存入本机ARP缓存中并保留一定时间，下次请求时直接查询ARP缓存以节约资源
+  - 若**不处于同一个子网下，就发送给网关**，让网关（路由器）转发放到目标子网中
 
-![ICMP.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%EF%BC%9A%E7%BD%91%E7%BB%9C%E5%B1%82/ICMP.png?raw=true)
+##### 8：无分类域间路由选择
+
+- CIDR：不再以分类地址为单位进行分配，而是根据网络的实际规模将任意连续的地址块分给一个机构，拥有着再进一步对子网划分
+- 表示：前缀/长度；描述一个网络时，域间选路时仅提供IP网络前缀部分用于选路
+- 路由聚合：CIDR将若干个连续的，相同的前缀取出构成一个更大的前缀，构成超网（superNet）
+- 最长前缀匹配原则：选择路由时，最长的网络前缀匹配	
+
+##### 9：ICMP：互联网控制消息协议
+
+- 通过在网络中产生错误和通知消息以增强互联网的可管理性，通过IP包承载
+
+##### 10：路由器
+
+在网络中转发和分组的设备，第三层设备
+
+- 路由选择：执行路由协议，创建、维护路由表，生成转发表
+  - 当一个IP数据包从一台计算机被发送，它会到达一个IP路由器，路由器负责将这个包路由至它的目的地，或者间接地通过其他的路由器，在一个相同的通信中，一个包所经由的路径可能会和其他的包不同。而路由器负责根据通信量、网络中的错误或者其他参数来进行正确地寻址
+- 转发：根据IP地址查找转发表，转发到指定端口
+
+##### 11：路由表，路由协议
+
+![](/Users/likang/Code/Git/Web-Developing/2：计算机网络/网络层/路由表，路由协议.png)
+
+##### 12：Dikastra算法
 
 
-
-### IP 路由器,又称路由器
-
-**路由选择：**当一个IP数据包从一台计算机被发送，它会到达一个IP路由器，路由器负责将这个包路由至它的目的地，或者间接地通过其他的路由器
-在一个相同的通信中，一个包所经由的路径可能会和其他的包不同。而路由器负责根据通信量、网络中的错误或者其他参数来进行正确地寻址
-
-![路由器.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%EF%BC%9A%E7%BD%91%E7%BB%9C%E5%B1%82/%E8%B7%AF%E7%94%B1%E5%99%A8.png?raw=true)
-
-### 路由表，路由协议
-
-![路由表，路由协议.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%EF%BC%9A%E7%BD%91%E7%BB%9C%E5%B1%82/%E8%B7%AF%E7%94%B1%E8%A1%A8%EF%BC%8C%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE.png?raw=true)
-
-
-
-### Dikastra算法
-
-![Dikastra.png](https://github.com/likang315/Web-Developing/blob/master/Web%20%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/2%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%EF%BC%9A%E7%BD%91%E7%BB%9C%E5%B1%82/Dikastra.png?raw=true)
 
