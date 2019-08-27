@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="gb2312"?>
-<x xmlns:n1="http://www.w3.org" 
-   xmlns="http://www.w3.org" >
-    <!--正确，属性名不相同-->
-    <good a="1"     b="2" />
-    <!--正确，没有前缀的属性a不在任何的名称空间中，即使是缺省的名称空间也不例外-->
-    <good a="1"     n1:a="2" />
-</x>
