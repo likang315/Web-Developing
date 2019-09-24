@@ -38,7 +38,7 @@
 
 ##### 4：URL
 
-- <protocol> // <user>: <password>@<host>:<port>/url_path
+- <protocol> :// <user>: <password>@<host>:<port>/url_path
 - user，password@，port为可选值
 
 ##### 5：主要协议介绍
@@ -79,9 +79,9 @@
 
   - SNMP 用于计算机网络的管理
 
-- ###### ICMP 负责网络中的错误处理
+- ###### ICMP 负责网络中的错误处理【网络层】
 
-- ###### ARP - 地址解析协议（Address Resolution Protocol）
+- ###### ARP - 地址解析协议（Address Resolution Protocol）【网络层】
 
   - ARP：用于基于 IP 地址的计算机网卡的硬件地址
 
@@ -97,4 +97,4 @@
 
   - PPTP 用于私人网络之间的连接（隧道）
 
-
+ 
